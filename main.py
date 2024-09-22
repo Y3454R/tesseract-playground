@@ -8,6 +8,7 @@ import os
 #     pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
 # Load an image from file
+
 image_path = 'images/sample_image.jpeg'  # Replace this with the path to your image
 image = Image.open(image_path)
 
