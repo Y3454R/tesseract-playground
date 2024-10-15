@@ -1,9 +1,16 @@
 import cv2
-import pytesseract
+import os
 from PIL import Image
 
+# Create the output directory if it doesn't exist
+output_dir = 'output_sections'
+os.makedirs(output_dir, exist_ok=True)
+
 # Load the image using OpenCV
-image = cv2.imread('images/sample_image_bangla.jpg')
+# 126-jpg_jpg.rf.fc6cd630ae9672be2526c9bfb69e5318_0car_lp.png
+# image = cv2.imread('images/sample_image_bangla.jpg')
+
+image = cv2.imread('images/126-jpg_jpg.rf.fc6cd630ae9672be2526c9bfb69e5318_0car_lp.png')
 
 # Get image dimensions
 height, width = image.shape[:2]
@@ -12,20 +19,12 @@ height, width = image.shape[:2]
 upper_section = image[0:int(height/2), 0:width]  # Top half for text
 lower_section = image[int(height/2):height, 0:width]  # Bottom half for numbers
 
-# Convert the sections to grayscale
-gray_upper = cv2.cvtColor(upper_section, cv2.COLOR_BGR2GRAY)
-gray_lower = cv2.cvtColor(lower_section, cv2.COLOR_BGR2GRAY)
+# Save the two sections in the specified directory
+upper_section_path = os.path.join(output_dir, 'upper_section.png')
+lower_section_path = os.path.join(output_dir, 'lower_section.png')
 
-# Apply thresholding to improve text clarity
-thresh_upper = cv2.threshold(gray_upper, 0, 255, cv2.THRESH_BINARY | cv2.THRESH_OTSU)[1]
-thresh_lower = cv2.threshold(gray_lower, 0, 255, cv2.THRESH_BINARY | cv2.THRESH_OTSU)[1]
+cv2.imwrite(upper_section_path, upper_section)
+cv2.imwrite(lower_section_path, lower_section)
 
-# Perform OCR on each section
-upper_text = pytesseract.image_to_string(Image.fromarray(thresh_upper), lang='ben')
-lower_text = pytesseract.image_to_string(Image.fromarray(thresh_lower), config='--psm 7', lang='ben')
-
-# Combine the results
-extracted_text = upper_text.strip() + "\n" + lower_text.strip()
-
-print("Optimized Extracted Bangla Text:")
-print(extracted_text)
+print(f"Upper section saved as: {upper_section_path}")
+print(f"Lower section saved as: {lower_section_path}")

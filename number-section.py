@@ -5,31 +5,47 @@ import os
 vertical_output_dir = 'output_sections/vertical_sections'
 os.makedirs(vertical_output_dir, exist_ok=True)
 
-# Load the image using OpenCV
-image = cv2.imread('images/sample_image_bangla.jpg')
-# image = cv2.imread('images/126-jpg_jpg.rf.fc6cd630ae9672be2526c9bfb69e5318_0car_lp.png')
+if os.path.exists(vertical_output_dir):
+    # Iterate over all items in the directory
+    for item in os.listdir(vertical_output_dir ):
+        item_path = os.path.join(vertical_output_dir , item)  # Get full path
 
-# Get image dimensions
-height, width = image.shape[:2]
+        # Check if the item is a file
+        if os.path.isfile(item_path):
+            os.remove(item_path)  # Delete the file
 
-# Split the image horizontally
-lower_section = image[int(height/2):height, 0:width]  # Bottom half for numbers
+    # print(f"All files deleted from: {vertical_output_dir }")
+else:
+    print(f"The directory does not exist: {vertical_output_dir }")
 
-# Define the number of vertical splits and the width of each section
-num_vertical_splits = 3  # Adjust based on the number of segments needed
-split_width = width // num_vertical_splits
+# Directory containing the images to process
+images_dir = 'images'
 
-# Iterate to create vertical sections
-for i in range(num_vertical_splits):
-    # Calculate the x-coordinates for each vertical slice
-    start_x = i * split_width
-    end_x = (i + 1) * split_width if (i + 1) < num_vertical_splits else width
+# Iterate over each image file in the images directory
+for filename in sorted(os.listdir(images_dir)):
+    if filename.endswith(('.jpg', '.png')):  # Check for image file extensions
+        image_path = os.path.join(images_dir, filename)
+        # Load the image using OpenCV
+        image = cv2.imread(image_path)
 
-    # Extract the vertical slice from the lower section
-    vertical_slice = lower_section[:, start_x:end_x]
+        # Get image dimensions
+        height, width = image.shape[:2]
 
-    # Save the vertical slice in the specified directory
-    vertical_slice_path = os.path.join(vertical_output_dir, f'vertical_section_{i + 1}.png')
-    cv2.imwrite(vertical_slice_path, vertical_slice)
+        # Split the image horizontally
+        lower_section = image[int(height / 2):height, 0:width]  # Bottom half for numbers
 
-    print(f"Vertical section {i + 1} saved as: {vertical_slice_path}")
+        # Calculate the widths for the sections
+        first_section_width = width // 3
+        second_section_width = width - first_section_width
+
+        # Extract the first section (1/3)
+        first_section = lower_section[:, 0:first_section_width]
+        first_section_path = os.path.join(vertical_output_dir, f'{filename}_first_section.png')
+        cv2.imwrite(first_section_path, first_section)
+        # print(f"First section (1/3) saved as: {first_section_path}")
+
+        # Extract the second section (2/3)
+        second_section = lower_section[:, first_section_width:width]
+        second_section_path = os.path.join(vertical_output_dir, f'{filename}_second_section.png')
+        cv2.imwrite(second_section_path, second_section)
+        # print(f"Second section (2/3) saved as: {second_section_path}")

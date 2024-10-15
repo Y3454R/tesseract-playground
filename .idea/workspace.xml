@@ -5,7 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e5ac2fa2-51e5-4ce7-98d1-985fbc2957ba" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/testOfTesseract.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/testOfTesseract.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bangla-test.py" beforeDir="false" afterPath="$PROJECT_DIR$/bangla-test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/easyOcr.py" beforeDir="false" afterPath="$PROJECT_DIR$/easyOcr.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/sample_image.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/sample_image_bangla.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/number-ocr.py" beforeDir="false" afterPath="$PROJECT_DIR$/number-ocr.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/number-section.py" beforeDir="false" afterPath="$PROJECT_DIR$/number-section.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +42,13 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Python.bangla-test.executor": "Run",
+    "Python.easyOcr.executor": "Run",
     "Python.main.executor": "Run",
+    "Python.number-ocr.executor": "Run",
+    "Python.number-section.executor": "Run",
+    "Python.open-ocr-test.executor": "Run",
+    "Python.pattern.executor": "Run",
+    "Python.rename-files.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "last_opened_file_path": "/home/yeasar/pdf-highligher/backend",
@@ -43,14 +57,15 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-PY-242.21829.153" />
-        <option value="bundled-python-sdk-464836ebc622-b74155a9e76b-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-242.21829.153" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-PY-242.22855.92" />
+        <option value="bundled-python-sdk-b068d85d1acf-399fe30bd8c1-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-242.22855.92" />
       </set>
     </attachedChunks>
   </component>
@@ -64,14 +79,44 @@
       <updated>1726395224302</updated>
       <workItem from="1726395227793" duration="5546000" />
       <workItem from="1726980672029" duration="8114000" />
+      <workItem from="1727006061408" duration="3463000" />
+      <workItem from="1728971807350" duration="20235000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/number-ocr.py</url>
+          <line>33</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/testOfTesseract$bangla_test.coverage" NAME="bangla-test Coverage Results" MODIFIED="1726992563008" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/testOfTesseract$main.coverage" NAME="main Coverage Results" MODIFIED="1726992557060" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/testOfTesseract$open_ocr_test.coverage" NAME="open-ocr-test Coverage Results" MODIFIED="1727009163261" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/testOfTesseract$number_section.coverage" NAME="number-section Coverage Results" MODIFIED="1728990676956" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/testOfTesseract$easyOcr.coverage" NAME="easyOcr Coverage Results" MODIFIED="1728995556669" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/testOfTesseract$bangla_test.coverage" NAME="bangla-test Coverage Results" MODIFIED="1728979186089" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/testOfTesseract$rename_files.coverage" NAME="rename-files Coverage Results" MODIFIED="1728990605195" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/testOfTesseract$pattern.coverage" NAME="pattern Coverage Results" MODIFIED="1728994291884" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/testOfTesseract$main.coverage" NAME="main Coverage Results" MODIFIED="1728972542651" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/testOfTesseract$number_ocr.coverage" NAME="number-ocr Coverage Results" MODIFIED="1728990679662" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

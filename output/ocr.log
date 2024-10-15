@@ -1,0 +1,6 @@
+2024-10-15 13:03:57,573 - INFO - Starting OCR for image: images/sample_image_bangla.jpg
+2024-10-15 13:03:57,600 - INFO - Preprocessed image saved to: output/preprocessed_image.png
+2024-10-15 13:03:58,107 - INFO - Extracted Text: ৫
+2024-10-15 13:03:58,108 - WARNING - License Plate Format Invalid: Invalid Format
+2024-10-15 13:03:58,108 - INFO - OCR Result: Invalid Format
+2024-10-15 13:03:58,108 - INFO - OCR Process Completed.
